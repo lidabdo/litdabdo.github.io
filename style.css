@@ -1,0 +1,484 @@
+/* RESET ESSENTIEL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* STRUCTURE PLEINE HAUTEUR */
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+/* CONTENU PRINCIPAL */
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+
+
+/* =========================
+   BASE
+   ========================= */
+
+   html, body {
+     height: 100%;
+     margin: 0;
+   }
+
+   body {
+     display: flex;
+     flex-direction: column;
+     font-family: Arial, Helvetica, sans-serif;
+     background: #f5f5f5;
+     color: #222;
+   }
+
+   /* Le contenu prend toute la place disponible */
+   main {
+     flex: 1;
+   }
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+  background: #008c3a;
+  color: white;
+  padding: 15px 20px;
+}
+
+header h1 {
+  margin: 0 0 10px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+nav a.active {
+  text-decoration: underline;
+}
+
+/* =========================
+   CONTENU
+   ========================= */
+
+main {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  color: #008c3a;
+}
+
+/* =========================
+   IMAGE CLIQUABLE
+   ========================= */
+
+.img-hover {
+  display: inline-block;
+}
+
+.img-hover img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================
+   TABLEAU
+   ========================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #008c3a;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: #cfeedd;
+}
+.table-durable th {
+  background-color: #008c3a;
+  color: white;
+}
+
+.table-durable td {
+  color: #222;
+}
+
+/* =========================
+   LISTES
+   ========================= */
+
+ul, ol {
+  margin-left: 20px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+   footer {
+     background-color: #222;
+     color: white;
+     text-align: center;
+     padding: 15px;
+     bottom: 0;
+   }
+
+
+
+/* INFO-BULLE */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.tooltip {
+  border: 2px solid red;
+}
+
+/* IMAGE AVEC TEXTE AU SURVOL */
+.img-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.img-hover img {
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.img-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.img-hover:hover img {
+  filter: brightness(60%);
+}
+
+.img-hover:hover .img-text {
+  opacity: 1;
+}
+
+/* CONTENEUR PRINCIPAL */
+main {
+  padding: 20px;
+}
+
+/* INTRO */
+.intro {
+  margin-bottom: 30px;
+}
+
+.intro h2 {
+  color: #008c3a;
+}
+
+/* CONTENU EN DEUX COLONNES */
+.contenu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+/* TEXTE */
+.texte ul {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* IMAGE */
+.image {
+  max-width: 400px;
+}
+
+/* IMAGE AVEC TEXTE AU SURVOL */
+.img-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.img-hover img {
+  width: 100%;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.img-text {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.img-hover:hover img {
+  filter: brightness(60%);
+}
+
+.img-hover:hover .img-text {
+  opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .contenu {
+    flex-direction: column;
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f5;
+}
+
+/* Le contenu principal prend tout l’espace */
+main {
+  flex: 1;
+}
+/* HERO */
+.hero {
+  background-color: #008c3a;
+  color: white;
+  padding: 40px 30px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.hero h2 {
+  margin-top: 0;
+}
+
+/* CARTE PRINCIPALE */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card-text h3 {
+  margin-top: 0;
+  color: #008c3a;
+}
+
+.card-text ul {
+  line-height: 1.7;
+}
+
+/* IMAGE */
+.card-image {
+  max-width: 400px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* TABLEAU GRAND ET LISIBLE */
+.table-durable {
+  width: 100%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.table-durable th,
+.table-durable td {
+  padding: 14px 18px;
+  text-align: center;
+}
+
+.table-durable th {
+  background-color: #008c3a;
+  color: white;
+}
+
+.table-durable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+@media (max-width: 600px) {
+  .table-durable {
+    font-size: 14px;
+  }
+}
+/* HEADER AVEC LOGO CLIQUABLE */
+.site-header {
+  background-color: #008c3a;
+  color: white;
+  padding: 15px 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Partie gauche : logo + titre */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Logo */
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+/* Lien du logo */
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation */
+.site-header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.site-header nav a.active {
+  border-bottom: 2px solid white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .site-header nav a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
+}
+/* LOGO NAOLIB */
+.logo {
+  height: 40px;      /* taille visible */
+  width: auto;       /* garde les proportions */
+  display: block;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  z-index: 100;
+}
+body {
+  padding-bottom: 60px; /* hauteur du footer */
+}
+main {
+  min-height: calc(100vh - 140px);
+}
